@@ -8,6 +8,7 @@
 body {
     height: 100%;
     width: 100%;
+    background-color: #dddddd;
 }
 
 header {
@@ -17,6 +18,7 @@ header {
 }
 
 header nav {
+    height: 50px;
     top: 0;
 }
 
@@ -27,8 +29,15 @@ header nav {
     font-size: large;
     text-transform: uppercase;
     line-height: 50px;
-    padding-left: 40px;
-    color: #fff;
+    margin-left: 40px;
+    padding: 0 20px 0 20px;
+    color: #f5f5f5;
+    height: 50px;
+    width: 220px;
+
+    background: linear-gradient(90deg, rgb(44, 41, 41) 0%, rgb(251, 255, 0) 60%, rgb(44, 41, 41) 95%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 .main-nav {
@@ -59,13 +68,17 @@ header nav li {
 
 .main-nav li a {
     text-decoration: none;
-    color: #fff;
+    color: #f5f5f5;
+}
+
+.main-nav li a:hover {
+    opacity: 0.8;
 }
 
 .placeholder-line {
     height: 5px;
     width: 100%;
-    background-color: rgb(109, 109, 109);
+    background: url("./assets/img/placeholder-texture.png");
 }
 
 .container {
@@ -93,18 +106,18 @@ header nav li {
     width: 1524px;
 }
 
-#main-content {
+#short-info-content {
     height: 250px;
 }
 
-#main-content div {
+#short-info-content div {
     position: absolute;
     right: 0;
     margin-top: 70px;
     margin-right: 340px;
 }
 
-#main-content img {
+#short-info-content img {
     margin-top: 20px;
     position: absolute;
     height: 212px;
@@ -112,15 +125,23 @@ header nav li {
     left: 25%;
 }
 
+#short-info-content p {
+    font-size: 13pt;
+}
+
 #info-content {
     height: 300px;
-    color: white;
+    color: #f5f5f5;
 }
 
 #info-content div {
-    position: absolute;
-    margin-left: 55%;
-    margin-top: 70px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+#info-content p {
+    margin-top: 10px;
+    font-size: 13pt;
 }
 
 #info-content img {
@@ -156,7 +177,7 @@ header nav li {
 
 #features-content {
     text-align: center;
-    height: 350px;
+    height: 340px;
 }
 
 #features-content h1 {
@@ -166,7 +187,7 @@ header nav li {
 }
 
 .icon-list-1 {
-    margin-top: 10px;
+    margin-top: 20px;
     padding-top: 20px;
     display: grid;
     grid-template-columns: 400px 400px 400px;
@@ -174,10 +195,11 @@ header nav li {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    text-align: center;
 }
 
 .icon-list-2 {
-    margin-top: 180px;
+    margin-top: 160px;
     padding-top: 20px;
     display: grid;
     grid-template-columns: 400px 400px 400px;
@@ -185,6 +207,7 @@ header nav li {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    text-align: center;
 }
 
 .icon-block i {
@@ -197,15 +220,62 @@ header nav li {
     font-size: 14pt;
 }
 
+#support-content {
+    height: 340px;
+    text-align: center;
+}
+
+#support-content h1 {
+    margin-top: 20px;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#support-content div {
+    font-size: 12pt;
+}
+
+#support-content i {
+    margin-top: 50px;
+    font-size: 48pt;
+}
+
+#support-content p {
+    margin-top: 20px;
+}
+
+.connect-btn {
+    margin-top: 7px;
+}
+
+.connect-btn a {
+    text-decoration: none;
+    color: black;
+    height: 30px;
+    width: 100px;
+    padding: 7px;
+    background-color: rgba(37, 41, 46, 0.315);
+    border-radius: 10px;
+    border: 3px solid #687077;
+}
+
 .to-top {
-    position: fixed;
+    position: absolute;
     right: 30px;
-    bottom: 30px;
+    bottom: 60px;
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+    background-color: rgb(37, 41, 46);
 }
 
 .to-top a {
     font-size: 28pt;
-    color: black;
+    color: #687077;
+}
+
+.to-top span {
+    padding: 8px 8px 8px 9px;
 }
 
 footer {
@@ -217,7 +287,7 @@ footer {
     font-size: 12pt;
     font-weight: 300;
     line-height: 1.2;
-    color: white;
+    color: #f5f5f5;
 }
 
 .copyright {
@@ -227,7 +297,7 @@ footer {
     bottom: 0;
     padding-top: 7px;
     text-align: center;
-    color: white;
+    color: #f5f5f5;
     background-color: rgb(37, 41, 46);
 }
 
