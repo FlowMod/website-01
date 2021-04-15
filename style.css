@@ -34,19 +34,15 @@ header nav {
     color: #dddddd;
     height: 50px;
     width: 220px;
-    background: linear-gradient(90deg, rgb(44, 41, 41) 0%, rgb(251, 255, 0) 60%, rgb(44, 41, 41) 95%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
 }
 
 #network-title a {
     text-decoration: none;
+    color: #dddddd;
 }
 
 .main-nav {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
+    text-align: center;
 }
 
 header nav {
@@ -58,31 +54,62 @@ header nav li {
     display: inline-block;
     list-style: none;
     line-height: 50px;
+    height: 50px;
+    width: 260px;
+    padding: 0 -20px 0 -20px;
+    margin-right: -3%;
 
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0) 25%,
+        rgba(150, 57, 57, 0.6) 25%,
+        rgba(150, 57, 57, 0.6) 50%,
+        rgba(150, 57, 57, 0.6) 75%,
+        rgba(0, 0, 0, 0) 75%);
+}
+
+.first-list-item {
+    margin-left: 180px;
+}
+
+.main-nav li a {
+    height: 50px;
+    width: 100px;
+    text-decoration: none;
+    color: #dddddd;
+}
+
+.main-nav li:hover {
+    opacity: 0.8;
+    animation: hover_effect 300ms forwards;
+    
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0) 25%,
+        rgba(150, 57, 57, 0.5) 25%,
+        rgba(150, 57, 57, 0.5) 50%,
+        rgba(150, 57, 57, 0.5) 75%,
+        rgba(0, 0, 0, 0) 75%);
+}
+
+@keyframes hover_effect {
+    0% {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    100% {
+        margin-left: -2%;
+        margin-right: -5%;
+    }
 }
 
 .main-nav {
     text-transform: uppercase;
     font-weight: bold;
-}
-
-.main-nav a li {
-    margin-right: 20px;
-    padding: 0 20px 0 20px;
-    background: linear-gradient(135deg, rgb(251, 255, 0) 50%, rgb(44, 41, 41) 50%);
-}
-
-.first-nav-item {
-    margin-left: 20px;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: #dddddd;
-}
-
-.main-nav li a:hover {
-    opacity: 0.8;
+    background: linear-gradient(135deg, rgba(44, 41, 41, 0.6) 0%, rgba(251, 255, 0, 0.6) 80%, rgba(251, 255, 0, 0.6) 100%);
 }
 
 .placeholder-line {
@@ -97,12 +124,11 @@ header nav li {
 }
 
 #welcome-content {
-    margin: 160px 0px 30px 0px;
-    text-align: right;
+    margin: 180px 0px 10px 0px;
+    text-align: center;
     font-weight: bold;
     text-transform: uppercase;
     font-size: x-large;
-    padding: 0px 230px 0 0;
     width: 100%;
 }
 
@@ -173,8 +199,7 @@ header nav li {
 }
 
 #news-content div {
-    position: absolute;
-    right: 0;
+    float: right;
     margin-top: 140px;
     margin-right: 240px;
 }
@@ -183,6 +208,7 @@ header nav li {
     position: absolute;
     margin-top: 60px;
     left: 25%;
+    z-index: -1;
 }
 
 #features-content {
