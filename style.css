@@ -30,10 +30,18 @@ header nav {
     text-transform: uppercase;
     line-height: 50px;
     margin-left: 40px;
-    padding: 0 20px 0 20px;
+    padding: 0 20px 0 120px;
     color: #dddddd;
     height: 50px;
     width: 220px;
+}
+
+#network-title img {
+    position: absolute;
+    top: 2.5px;
+    left: 60px;
+    height: 42px;
+    width: 42px;
 }
 
 #network-title a {
@@ -70,7 +78,7 @@ header nav li {
 }
 
 .first-list-item {
-    margin-left: 180px;
+    margin-left: -60px;
 }
 
 .main-nav li a {
@@ -317,7 +325,7 @@ header nav li {
 }
 
 footer {
-    height: 200px;
+    height: 250px;
     width: 100%;
     position: relative;
     background-color: #343a40;
@@ -328,8 +336,8 @@ footer {
     color: #dddddd;
 }
 
-.copyright {
-    height: 30px;
+.sub-footer {
+    height: 50px;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -339,12 +347,12 @@ footer {
     background-color: rgb(37, 41, 46);
 }
 
-.copyright a {
+.sub-footer a {
     color: rgb(0, 123, 255);
     text-decoration: none;
 }
 
-.copyright a:hover {
+.sub-footer a:hover {
     text-decoration: underline;
     color: rgba(0, 123, 255, 0.8);
 }
@@ -370,22 +378,74 @@ footer {
     margin-right: 40px;
 }
 
-.fa-discord {
-    color: rgb(115, 138, 219);
+.discord {
+    position: absolute;
+    left: -365px;
+    height: 50px;
+    width: 600px;
 
-    padding-left: 5px;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0) 25%,
+        rgb(115, 138, 219) 25%,
+        rgb(115, 138, 219) 50%,
+        rgba(115, 138, 219) 75%,
+        rgba(0, 0, 0, 0) 75%);
+}
+
+.discord h4 {
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 165px;
+    font-size: 14pt;
+}
+
+.fa-discord {
+    color: #dddddd;
+    margin-top: 10px;
+    margin-left: 390px;
 }
 
 .fa-discord:hover {
     opacity: 0.8;
 }
 
+.youtube {
+    position: absolute;
+    left: -35px;
+    height: 50px;
+    width: 600px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0) 25%,
+        rgb(255, 0, 0) 25%,
+        rgb(255, 0, 0) 50%,
+        rgb(255, 0, 0) 75%,
+        rgba(0, 0, 0, 0) 75%);
+}
+
+.youtube h4 {
+    position: absolute;
+    margin-top: -28px;
+    margin-left: 165px;
+    font-size: 14pt;
+}
+
 .fa-youtube {
-    color: rgb(255, 0, 0);
+    color: #dddddd;
+    margin-top: 10px;
+    margin-left: 390px;
 }
 
 .fa-youtube:hover {
-    color: rgba(255, 0, 0, 0.8);
+    opacity: 0.8;
+}
+
+.twitter {
+    visibility: hidden;
 }
 
 .fa-twitter {
@@ -394,6 +454,10 @@ footer {
 
 .fa-twitter:hover {
     opacity: 0.8;
+}
+
+.instagram {
+    visibility: hidden;
 }
 
 .fa-instagram {
@@ -430,4 +494,22 @@ footer {
     position: absolute;
     left: 15%;
     transform: translate(-85%);
+}
+
+.footer-title p {
+    float: left;
+    margin-top: 90px;
+    position: absolute;
+    left: 15%;
+    transform: translate(-85%);
+}
+
+.footer-title a {
+    text-decoration: none;
+    color: rgb(0, 123, 255);
+}
+
+.footer-title a:hover {
+    color: rgba(0, 123, 255, 0.8);
+    text-decoration: underline;
 }
