@@ -31,13 +31,16 @@ header nav {
     line-height: 50px;
     margin-left: 40px;
     padding: 0 20px 0 20px;
-    color: #f5f5f5;
+    color: #dddddd;
     height: 50px;
     width: 220px;
-
     background: linear-gradient(90deg, rgb(44, 41, 41) 0%, rgb(251, 255, 0) 60%, rgb(44, 41, 41) 95%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+}
+
+#network-title a {
+    text-decoration: none;
 }
 
 .main-nav {
@@ -55,6 +58,7 @@ header nav li {
     display: inline-block;
     list-style: none;
     line-height: 50px;
+
 }
 
 .main-nav {
@@ -62,13 +66,19 @@ header nav li {
     font-weight: bold;
 }
 
-.main-nav li {
+.main-nav a li {
     margin-right: 20px;
+    padding: 0 20px 0 20px;
+    background: linear-gradient(135deg, rgb(251, 255, 0) 50%, rgb(44, 41, 41) 50%);
 }
 
-.main-nav li a {
+.first-nav-item {
+    margin-left: 20px;
+}
+
+.main-nav a {
     text-decoration: none;
-    color: #f5f5f5;
+    color: #dddddd;
 }
 
 .main-nav li a:hover {
@@ -131,11 +141,11 @@ header nav li {
 
 #info-content {
     height: 300px;
-    color: #f5f5f5;
+    color: #dddddd;
 }
 
 #info-content div {
-    padding-top: 50px;
+    padding-top: 95px;
     text-align: center;
 }
 
@@ -250,7 +260,9 @@ header nav li {
 
 .connect-btn a {
     text-decoration: none;
-    color: black;
+    color: #dddddd;
+    font-weight: bold;
+    font-size: large;
     height: 30px;
     width: 100px;
     padding: 7px;
@@ -287,7 +299,7 @@ footer {
     font-size: 12pt;
     font-weight: 300;
     line-height: 1.2;
-    color: #f5f5f5;
+    color: #dddddd;
 }
 
 .copyright {
@@ -297,7 +309,7 @@ footer {
     bottom: 0;
     padding-top: 7px;
     text-align: center;
-    color: #f5f5f5;
+    color: #dddddd;
     background-color: rgb(37, 41, 46);
 }
 
