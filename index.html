@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
 </head>
 
-<body>
+<body id="top">
     <header>
         <nav>
             <div class="network-title">
@@ -19,10 +19,10 @@
             </div>
 
             <ul class="main-nav">
-                <li><a href="#info">Infos</a></li>
-                <li><a href="#news">Neuigkeiten</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#support">Support</a></li>
+                <li><a onclick="scrollToElement('#info')">Infos</a></li>
+                <li><a onclick="scrollToElement('#news')">Neuigkeiten</a></li>
+                <li><a onclick="scrollToElement('#features')">Features</a></li>
+                <li><a onclick="scrollToElement('#support')">Support</a></li>
                 <li><a href="forum.slashmc.de">Forum</a></li>
             </ul>
 
@@ -33,6 +33,10 @@
     </header>
 
     <script>
+        function scrollToElement(id) {
+            document.querySelector(id).scrollIntoView({behavior: 'smooth'});
+        }
+
         var expand_btn = document.getElementsByClassName("expand-nav-btn")[0];
         var header_tag = document.getElementsByTagName("header")[0];
         var main_nav = document.getElementsByClassName("main-nav")[0];
@@ -84,7 +88,7 @@
             }
         }
 
-        window.matchMedia("(max-width: 849px)").addListener(reset_nav)
+        window.matchMedia("(max-width: 911px)").addListener(reset_nav)
     </script>
 
     <div id="welcome-content" class="container parallax bg-1">
@@ -117,26 +121,38 @@
     <div id="news" class="placeholder-line-down"></div>
 
     <div id="news-content" class="container">
-        <img src="./assets/img/minecraft-chest.png">
-
         <h1>Neuigkeiten</h1>
 
-        <div>
-            <h2>XXXX ist in Planung</h2><br>
+        <div class="apply">
+            <div>
+                <h2>Bewerben als</h2>
+            </div>
 
-            <p>
-                <b>Hey!</b>
-                <br />
-                <br />
-                Wir möchten Sie nur informieren, dass
-                <br />
-                XXXX nun in Planung ist.
-                <br />
-                <br />
-                Genaues Datum
-                <br />
-                XX.XX.XXXX bis XX.XX.XXXX
-              </p>
+            <div class="apply-list">
+                <div>
+                    <h3>Supporter</h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore <br>
+                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                </div>
+                
+                <div>
+                    <h3>Developer</h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore <br>
+                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                </div>
+                
+                <div>
+                    <h3>Content</h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore <br>
+                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                </div>
+                
+                <div>
+                    <h3>Builder</h3>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore <br>
+                        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -184,8 +200,10 @@
         <h1>Support</h1>
 
         <div>
-            <p>Der Support hat von XX:XX bis XX:XX geöffnet!<br>
-            Kompetente und Informativer Support, bei Fragen im Bezug auf den Server.</p>
+            <p>Der Support hat falls ein Supporter online ist geöffnet, <br>
+            du kannst auch auf dem <a href="https://discord.gg/jNA4NwJP93">Discord-Server</a> Support beanspruchen!</p>
+
+            <p>Kompetente und Informativer Support, bei Fragen im Bezug auf den Server.</p>
 
             <i class="fas fa-info-circle"></i>
 
@@ -198,7 +216,7 @@
         </div>
     </div>
 
-    <div id="footer" class="placeholder-line-up"></div>
+    <div class="placeholder-line-up"></div>
 
     <footer>
         <div class="footer-title">
@@ -207,8 +225,8 @@
         </div>
 
         
-        <div class="to-top">
-            <a href="#"><span class="fas fa-arrow-up"></span></a>
+        <div class="to-top" onclick="scrollToElement('#top')">
+            <a><span class="fas fa-arrow-up"></span></a>
         </div>
   
         <div class="social-media">
@@ -217,7 +235,7 @@
             <div class="discord">
                 <i class="fab fa-discord icon"></i>
                 <h4>Unser Discord-Server</h4>
-                <a href="#"></a>
+                <a href="https://discord.gg/jNA4NwJP93"></a>
             </div>
   
             <div class="youtube">

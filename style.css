@@ -4,37 +4,46 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
     height: 100%;
-    width: 100%;
+    width: 100% !important;
     background-color: #dddddd;
+    overflow-x: hidden;
+    -webkit-overflow-x: hidden;
+    -moz-overflow-x: hidden;
 }
 
 header {
     height: 50px;
     width: 100%;
-    background-color: rgb(59, 59, 59);
+    background: linear-gradient(
+        135deg,
+        rgb(62,85,31) 0%,
+        rgb(62,85,31) 25%,
+        rgb(62,85,31) 50%,
+        rgb(93,119,32) 75%,
+        rgb(93,119,32) 100%);
 }
 
 @media only screen and (max-width: 1594px) {
-    .network-title h1 {
-        visibility: hidden !important;
-    }
-
     .main-nav {
-        left: 0% !important;
         margin-top: 0px !important;
     }
 
-    .main-nav-expanden {
+    .main-nav-expanded {
         left: 0% !important;
     }
 }
 
-@media only screen and (max-width: 1163px) {
+@media only screen and (max-width: 1140px) {
+    header nav li {
+        width: 260px !important;
+    }
+}
+
+@media only screen and (max-width: 1426px) {
     header {
         height: 105px !important;
     }
@@ -44,15 +53,14 @@ header {
     }
 }
 
-@media only screen and (max-width: 957px) {
-    header nav li {
-        width: 300px !important;
-    }
-}
-
-@media only screen and (max-width: 849px) {
+@media only screen and (max-width: 985px) {
     header {
         height: 50px !important;
+    }
+
+    header nav li {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
     .network-title h1 {
@@ -60,23 +68,33 @@ header {
     }
 
     .expand-nav-btn {
-        visibility: visible !important;
+        display: block !important;
     }
 
     .main-nav {
         visibility: hidden !important;
     }
+
+    .network-title {
+        text-align: center;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .network-title img {
+        margin: 0 20px 0 60px !important;
+    }
 }
 
 @keyframes hover_effect {
     0% {
-        margin-left: 0px;
-        margin-right: -3%;
+        margin-left: 0;
+        margin-right: -2%;
     }
 
     100% {
-        margin-left: -2%;
-        margin-right: -5%;
+        margin-left: -4%;
+        margin-right: -6%;
     }
 }
 
@@ -86,7 +104,7 @@ header {
     height: 50px;
     width: 50px;
     right: 0;
-    visibility: hidden;
+    display: none;
 }
 
 .expand-nav-btn i {
@@ -137,15 +155,16 @@ header nav li {
     line-height: 50px;
     height: 50px;
     width: 260px;
-    margin-right: -3%;
+    margin-right: -2%;
+    cursor: pointer;
 
     background: linear-gradient(
         135deg,
         rgba(0, 0, 0, 0),
         rgba(0, 0, 0, 0) 25%,
-        rgba(150, 57, 57, 0.6) 25%,
-        rgba(150, 57, 57, 0.6) 50%,
-        rgba(150, 57, 57, 0.6) 75%,
+        rgba(209, 66, 26, 0.6) 25%,
+        rgba(209, 66, 26, 0.6) 50%,
+        rgba(209, 66, 26, 0.6) 75%,
         rgba(0, 0, 0, 0) 75%);
 }
 
@@ -158,7 +177,8 @@ header nav li {
 .main-nav li a {
     display: block;
     height: 50px;
-    width: 100%;
+    width: 200px;
+    margin-left: 30px;
     text-decoration: none;
     color: #dddddd;
 }
@@ -169,14 +189,7 @@ header nav li {
     -webkit-animation: hover_effect 300ms forwards;
     -moz-animation: hover_effect 300ms forwards;
     
-    background: linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0) 25%,
-        rgba(150, 57, 57, 0.5) 25%,
-        rgba(150, 57, 57, 0.5) 50%,
-        rgba(150, 57, 57, 0.5) 75%,
-        rgba(0, 0, 0, 0) 75%);
+    opacity: 0.5;
 }
 
 .main-nav-expanded {
@@ -312,7 +325,7 @@ header nav li {
 
 @media only screen and (max-width: 970px) {
     #short-info-content div img {
-        visibility: hidden;
+        display: none;
     }
 
     #short-info-content div {
@@ -382,7 +395,7 @@ header nav li {
 }
 
 #news-content {
-    height: 740px;
+    height: 600px;
 }
 
 #news-content h1 {
@@ -392,101 +405,33 @@ header nav li {
     font-weight: bold;
 }
 
-#news-content div {
-    float: right;
-    margin-top: 140px;
-    margin-right: 240px;
+.apply h2 {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: -20px;
+    font-size: x-large;
 }
 
-#news-content img {
-    position: absolute;
-    margin-top: 60px;
-    left: 25%;
-    z-index: -1;
-    height: 660px;
-    width: 816px;
+.apply-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    margin-top: 50px;
+    justify-content: center;
 }
 
-@media only screen and (max-width: 1550px) {
-    #news-content div {
-        float: left;
-        margin-top: 100px;
-        margin-left: 240px;
-    }
+.apply-list div {
+    text-align: center;
+    padding: 20px;
+    height: 300px;
+    width: 200px;
 }
 
-@media only screen and (max-width: 1120px) {
-    #news-content img {
-        margin-left: -100px;
-    }
+.apply-list div p {
+    padding-top: 10px;
 }
 
-@media only screen and (max-width: 1100px) {
-    #news-content div {
-        float: left;
-        margin-top: 100px;
-        margin-left: 200px;
-    }
-}
-
-@media only screen and (max-width: 990px) {
-    #news-content img {
-        margin-left: -150px;
-    }
-
-    #news-content div {
-        float: left;
-        margin-top: 100px;
-        margin-left: 150px;
-    }
-}
-
-@media only screen and (max-width: 920px) {
-    #news-content img {
-        margin-left: -200px;
-    }
-
-    #news-content div {
-        float: left;
-        margin-top: 100px;
-        margin-left: 100px;
-    }
-}
-
-@media only screen and (max-width: 850px) {
-    #news-content img {
-        visibility: hidden;
-    }
-
-    #news-content div {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-        -webkit-transform: translate(-50%, 0);
-        -moz-transform: translate(-50%, 0);
-        text-align: center;
-        margin: 50px 0 0 0;
-    }
-
-    #news-content {
-        height: 300px;
-    }
-
-    #news-content h2 {
-        margin-top: -20px;
-    }
-}
-
-@media only screen and (max-width: 471px) {
-    #news-content {
-        height: 330px;
-    }
-}
-
-@media only screen and (max-width: 450px) {
-    #news-content {
-        height: 350px;
-    }
+.apply-list div h3 {
+    font-size: 14pt;
 }
 
 
@@ -545,6 +490,30 @@ header nav li {
 
     .icon-list-1 {
         height: 160px;
+    }
+}
+
+@media only screen and (max-width: 624px) {
+    #features-content {
+        height: 440px;
+    }
+
+    .icon-list-1 > div {
+        width: 200px;
+        margin-left: 0px;
+    }
+
+    .icon-list-1 {
+        margin-top: 30px;
+        height: 120px;
+    }
+
+    .icon-list-1 div:nth-child(1) {
+        display: none;
+    }
+
+    .icon-list-1 div:nth-child(3) {
+        display: none;
     }
 }
 
@@ -628,7 +597,7 @@ header nav li {
 }
 
 #support-content i {
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 48pt;
 }
 
@@ -729,7 +698,8 @@ footer {
 .discord {
     margin-top: 20px;
     position: absolute;
-    left: -365px;
+    display: block;
+    margin-left: -365px;
     height: 50px;
     width: 600px;
 
@@ -757,13 +727,13 @@ footer {
     height: 50px;
     width: 375px;
     top: 0;
-    left: 113px;
+    margin-left: -387px;
 }
 
 .fa-discord {
     color: #dddddd;
     margin-top: 10px;
-    margin-left: 390px;
+    margin-left: 395px;
 }
 
 .discord:hover {
@@ -806,7 +776,7 @@ footer {
 .fa-youtube {
     color: #dddddd;
     margin-top: 10px;
-    margin-left: 275px;
+    margin-left: 280px;
 }
 
 .youtube:hover {
@@ -814,7 +784,7 @@ footer {
 }
 
 .twitter {
-    visibility: hidden;
+    display: none;
 }
 
 .fa-twitter {
@@ -826,7 +796,7 @@ footer {
 }
 
 .instagram {
-    visibility: hidden;
+    display: none;
 }
 
 .fa-instagram {
@@ -869,7 +839,7 @@ footer {
     }
 
     .discord {
-        left: -200px;
+        margin-left: -200px;
     }
 
     .youtube {
@@ -890,7 +860,7 @@ footer {
 
 @media only screen and (max-width: 420px) {
     .discord {
-        left: -160px;
+        left: 40px;
         width: 500px;
     }
 
@@ -899,7 +869,7 @@ footer {
     }
 
     .fa-discord {
-        margin-left: 330px;
+        margin-left: 337px;
     }
 
     .youtube {
@@ -912,7 +882,7 @@ footer {
     }
 
     .fa-youtube {
-        margin-left: 333px;
+        margin-left: 218px;
     }
 }
 
