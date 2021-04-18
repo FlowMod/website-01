@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav>
-            <div id="network-title">
+            <div class="network-title">
                 <img src="./assets/img/logo.png">
                 <a href="./index.html"><h1>Topika.de</h1></a>
             </div>
@@ -25,10 +25,69 @@
                 <li><a href="#support">Support</a></li>
                 <li><a href="forum.slashmc.de">Forum</a></li>
             </ul>
+
+            <div class="expand-nav-btn">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
-    <div id="welcome-content" class="container bg-1">
+    <script>
+        var expand_btn = document.getElementsByClassName("expand-nav-btn")[0];
+        var header_tag = document.getElementsByTagName("header")[0];
+        var main_nav = document.getElementsByClassName("main-nav")[0];
+        var main_nav_expanded = document.getElementsByClassName("main-nav-expanded")[0];
+        var link_tag = document.querySelector("a");
+
+        var expanded = false;
+
+        expand_btn.addEventListener("click", () => {
+            if(expanded == false) {
+                header_tag.setAttribute('style', 'height: 345px !important');
+                main_nav.className = "main-nav-expanded";
+                document.querySelector("#welcome-content h1").style.paddingTop = "175px";
+                document.querySelector("#welcome-content").style.height = "305px";
+                expanded = true;
+            } else {
+                main_nav_expanded = document.getElementsByClassName("main-nav-expanded")[0];
+                header_tag.attributeStyleMap.clear()
+                main_nav_expanded.className = "main-nav";
+                document.querySelector("#welcome-content h1").style.paddingTop = "470px";
+                document.querySelector("#welcome-content").style.height = "600px";
+                expanded = false;
+            }
+        });
+
+        document.querySelectorAll('a').forEach(item => {
+            item.addEventListener('click', event => {
+                if(expanded == true) {
+                    main_nav_expanded = document.getElementsByClassName("main-nav-expanded")[0];
+                    header_tag.attributeStyleMap.clear()
+                    main_nav_expanded.className = "main-nav";
+                    document.querySelector("#welcome-content h1").style.paddingTop = "470px";
+                    document.querySelector("#welcome-content").style.height = "600px";
+                    expanded = false;
+                }
+            })
+        })
+
+        function reset_nav(x) {
+            if(!x.matches) {
+                if(expanded) {
+                    main_nav_expanded = document.getElementsByClassName("main-nav-expanded")[0];
+                    header_tag.attributeStyleMap.clear()
+                    main_nav_expanded.attributeStyleMap.clear();
+                    document.querySelector("#welcome-content").attributeStyleMap.clear();
+                    main_nav_expanded.className = "main-nav";
+                    expanded = false;
+                }
+            }
+        }
+
+        window.matchMedia("(max-width: 849px)").addListener(reset_nav)
+    </script>
+
+    <div id="welcome-content" class="container parallax bg-1">
         <h1>Willkommen bei</h1>
         <h1>Topika.de</h1>
     </div>
@@ -47,7 +106,7 @@
 
     <div id="info" class="placeholder-line-up"></div>
 
-    <div id="info-content" class="container bg-2">
+    <div id="info-content" class="container parallax bg-2">
         <div>
             <h1>Information</h1>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore <br>
@@ -154,23 +213,17 @@
   
         <div class="social-media">
             <h1>Kontaktiere uns</h1>
-            
-            <div class="discord-link">
-                <a href="" target="_blank">--------------------</a>
-            </div>
 
             <div class="discord">
                 <i class="fab fa-discord icon"></i>
-                <h4>Unser Discord</h4>
-            </div>
-            
-            <div class="youtube-link">
-                <a href="" target="_blank">--------------------</a>
+                <h4>Unser Discord-Server</h4>
+                <a href="#"></a>
             </div>
   
             <div class="youtube">
                 <a href="" target="_blank"><i class="fab fa-youtube icon"></i></a>
                 <h4>Unser YouTube-Kanal</h4>
+                <a href="#"></a>
             </div>
   
             <div class="twitter">
