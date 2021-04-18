@@ -20,7 +20,7 @@ header {
 }
 
 @media only screen and (max-width: 1594px) {
-    .network-title {
+    .network-title h1 {
         visibility: hidden !important;
     }
 
@@ -55,7 +55,7 @@ header {
         height: 50px !important;
     }
 
-    .network-title {
+    .network-title h1 {
         visibility: visible !important;
     }
 
@@ -106,7 +106,7 @@ header nav {
     font-size: large;
     text-transform: uppercase;
     line-height: 50px;
-    margin: 0 20px 0 120px;
+    margin: 0 20px 0 60px;
     color: #dddddd;
     height: 50px;
     width: 150px;
