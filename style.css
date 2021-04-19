@@ -27,6 +27,38 @@ header {
         rgb(93,119,32) 100%);
 }
 
+.cookies-popup {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #232323;
+    z-index: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #dddddd;
+    display: none;
+}
+
+.cookies-popup p {
+    margin: 15px 0 0 15px;
+}
+
+.cookies-popup a {
+    position: relative;
+    display: block;
+    float: right;
+    margin-top: -27px !important;
+    margin-right: 20px;
+    padding: 10px 45px 10px 45px;
+    background-color: #000;
+    cursor: pointer;
+	transition: background 0.3s;
+}
+
+.cookies-popup a:hover {
+	background: #3E9B67;
+}
+
 @media only screen and (max-width: 1594px) {
     .main-nav {
         margin-top: 0px !important;
@@ -202,6 +234,10 @@ header nav li {
 .main-nav-expanded li {
     margin-top: 5px;
     width: 100% !important;
+}
+
+.main-nav-expanded li:hover {
+    opacity: 0.5;
 }
 
 .main-nav-expanded li:nth-child(1) {
@@ -387,11 +423,11 @@ header nav li {
 }
 
 .bg-1 {
-    background: url("https://i.imgur.com/9GkIEjN.png");
+    background: url("./assets/img/bg-1.png");
 }
 
 .bg-2 {
-    background: url("https://i.imgur.com/XL2PAd3.png");
+    background: url("./assets/img/bg-2.png");
 }
 
 #news-content {
@@ -418,10 +454,17 @@ header nav li {
     }
 }
 
+@media only screen and (max-width: 387px) {
+    #news-content {
+        height: 1420px;
+    }
+}
+
 .apply-text {
     text-align: center;
     font-weight: bold;
     margin-top: -20px;
+    padding: 0 5px 0 5px;
 }
 
 .apply-text a {
@@ -458,7 +501,7 @@ header nav li {
 
 .apply-list div {
     text-align: center;
-    padding: 20px;
+    padding: 20px 40px 20px 40px;
     height: 320px;
     width: 400px;
 }
@@ -485,6 +528,27 @@ header nav li {
 
 .apply-list div:nth-child(4) h3 {
     color: #15bed1;
+}
+
+.latest-tweet {
+    height: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.latest-tweet h1 {
+    padding-top: 20px;
+}
+
+.latest-tweet div {
+    display: flex;
+    position: relative;
+    margin-top: 0 !important;
+    bottom: -10px;
+    margin: 20px;
+    justify-content: center;
 }
 
 #features-content {
@@ -518,7 +582,6 @@ header nav li {
 
 #features-content h1 {
     padding-top: 20px;
-    font-size: xx-large;
     font-weight: bold;
     position: relative;
     top: 0%;
@@ -608,31 +671,31 @@ header nav li {
     text-align: center;
 }
 
-@media only screen and (max-width: 552px) {
+@media only screen and (max-width: 591px) {
     #support-content {
-        height: 340px;
+        height: 338px;
     }
 }
 
-@media only screen and (max-width: 352px) {
+@media only screen and (max-width: 486px) {
     #support-content {
-        height: 350px;
+        height: 356px;
     }
 }
 
-@media only screen and (max-width: 346px) {
+@media only screen and (max-width: 435px) {
     #support-content {
-        height: 370px;
+        height: 374px;
     }
 }
 
-@media only screen and (max-width: 287px) {
+@media only screen and (max-width: 386px) {
     #support-content {
-        height: 390px;
+        height: 392px;
     }
 }
 
-@media only screen and (max-width: 221px) {
+@media only screen and (max-width: 326px) {
     #support-content {
         height: 410px;
     }
@@ -646,6 +709,7 @@ header nav li {
 
 #support-content div {
     font-size: 12pt;
+    padding: 0 20px 0 20px;
 }
 
 #support-content i {
@@ -760,7 +824,7 @@ footer {
     margin-top: 20px;
     position: absolute;
     display: block;
-    margin-left: -365px;
+    margin-left: -355px;
     height: 50px;
     width: 600px;
 
@@ -804,7 +868,7 @@ footer {
 .youtube {
     margin-top: 20px;
     position: absolute;
-    left: -35px;
+    left: -25px;
     height: 50px;
     width: 600px;
 

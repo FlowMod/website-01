@@ -11,6 +11,26 @@
 </head>
 
 <body id="top">
+    <div class="cookies-popup">
+        <p>Durch das benützen dieser Website, akzeptierst du automatisch den Cookie-Richtlinien!</p>
+        <a onclick="acceptCookies()">Verstanden</a>
+    </div>
+
+    <script>
+        if(!document.cookie.includes("cookies=accepted")) {
+            var popup = document.getElementsByClassName("cookies-popup")[0];
+
+            popup.style.display = "block";
+        }
+
+        function acceptCookies() {
+            var popup = document.getElementsByClassName("cookies-popup")[0];
+
+            popup.style.display = "none";
+            document.cookie = "cookies=accepted; expires=Fri, 31 Dec 2099 22:59:59 UTC";
+        }
+    </script>
+    
     <header>
         <nav>
             <div class="network-title">
@@ -88,7 +108,7 @@
             }
         }
 
-        window.matchMedia("(max-width: 911px)").addListener(reset_nav)
+        window.matchMedia("(max-width: 986px)").addListener(reset_nav)
     </script>
 
     <div id="welcome-content" class="container parallax bg-1">
@@ -167,6 +187,16 @@
             <div class="apply-text">
                 <p>Du kannst dich auf unserem <a href="https://discord.gg/jNA4NwJP93" target="_blank">Discord</a> bewerben!</p>
             </div>
+        </div>
+    </div>
+
+    <div class="placeholder-line-down"></div>
+
+    <div class="latest-tweet">
+        <h1>Neuester Tweet</h1>
+
+        <div>
+            <blockquote class="twitter-tweet"><p lang="de" dir="ltr">Hat jemand einen oder zwei Kuchen bestellt? 🥮<br> » Admin AllesStyle hat den CakeKlicker fertig programmiert! 🥳 <a href="https://t.co/IN7ApFQrIy">pic.twitter.com/IN7ApFQrIy</a></p>&mdash; Topika (@TopikDE) <a href="https://twitter.com/TopikDE/status/1323412474914394113?ref_src=twsrc%5Etfw">November 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>
 
